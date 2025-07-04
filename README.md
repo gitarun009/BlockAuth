@@ -23,6 +23,13 @@ A modern, responsive product authenticity system for electronic devices, current
 - Use smart contracts for tamper-proof authenticity records
 - Enable decentralized verification for customers
 
+## 📸 Screenshots
+
+- Backend is yet to be deployed on a public server, so here are the screenshots of role-based portals
+<img width="502" alt="Screenshot 2025-07-04 at 11 02 10 AM" src="https://github.com/user-attachments/assets/65a02cbd-0d84-40cc-8894-ee11992cab43" />
+<img width="502" alt="Screenshot 2025-07-04 at 11 02 24 AM" src="https://github.com/user-attachments/assets/21e40fd1-f495-414d-9f0a-d002848634d5" />
+<img width="502" alt="Screenshot 2025-07-04 at 11 02 38 AM" src="https://github.com/user-attachments/assets/c35f6127-dab5-45a9-875e-8f3b57ad5f67" />
+
 ## 🛠️ Tech Stack
 
 | Technology | Description |
