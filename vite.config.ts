@@ -22,5 +22,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/BlockAuth/',
+  base: mode === 'production' ? '/BlockAuth/' : '/',
 }));
