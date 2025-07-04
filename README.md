@@ -23,6 +23,18 @@ A modern, responsive product authenticity system for electronic devices, current
 - Use smart contracts for tamper-proof authenticity records
 - Enable decentralized verification for customers
 
+
+## 📸 Screenshots
+
+<img width="502" alt="Screenshot 2025-07-04 at 10 50 28 AM" src="https://github.com/user-attachments/assets/cd5f7f76-9580-409e-9cca-d6ceb2cd230c" />
+<img width="502" alt="Screenshot 2025-07-04 at 10 51 08 AM" src="https://github.com/user-attachments/assets/22a4e88e-a634-4a3a-94e7-79368469a617" />
+<img width="502" alt="Screenshot 2025-07-04 at 10 50 52 AM" src="https://github.com/user-attachments/assets/5ec95b19-6024-4273-ac39-ef6b92c6c6e5" />
+<img width="502" alt="Screenshot 2025-07-04 at 10 53 33 AM" src="https://github.com/user-attachments/assets/0408f705-80bb-4973-bc59-b97778413772" />
+<img width="502" alt="Screenshot 2025-07-04 at 11 06 31 AM" src="https://github.com/user-attachments/assets/8ca3e3c4-ed3c-410a-9e68-7cec2275cc68" />
+<img width="502" alt="Screenshot 2025-07-04 at 11 02 10 AM" src="https://github.com/user-attachments/assets/823f8b1c-dff3-4458-b130-a1e94be88312" />
+<img width="502" alt="Screenshot 2025-07-04 at 11 02 24 AM" src="https://github.com/user-attachments/assets/1f0e6043-d5d2-4a61-b6ed-82bb9727e42c" />
+<img width="502" alt="Screenshot 2025-07-04 at 11 02 38 AM" src="https://github.com/user-attachments/assets/0459cca4-d4a3-43ea-8e74-0a7200373463" />
+
 ## 🛠️ Tech Stack
 
 | Technology | Description |
