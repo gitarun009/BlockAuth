@@ -48,6 +48,14 @@ const Index = () => {
     }
   }, [isAuthenticated]);
 
+  const goToPanel = (targetRole: 'manufacturer' | 'retailer' | 'customer') => {
+    if (isAuthenticated && role === targetRole) {
+      navigate(`/?panel=${targetRole}`);
+    } else {
+      navigate(`/login?panel=${targetRole}`);
+    }
+  };
+
   const renderActivePanel = () => {
     if (loading) return <BlockchainLoader />;
     switch (activePanel) {
@@ -129,7 +137,7 @@ const Index = () => {
                       <li>• QR code generation</li>
                       <li>• Blockchain integration</li>
                     </ul>
-                    <Button className="w-full mt-4" onClick={() => navigate('/login?panel=manufacturer')}>
+                    <Button className="w-full mt-4" onClick={() => goToPanel('manufacturer')}>
                       Access Panel
                     </Button>
                   </CardContent>
@@ -149,7 +157,7 @@ const Index = () => {
                       <li>• Buyer association</li>
                       <li>• Transaction logging</li>
                     </ul>
-                    <Button className="w-full mt-4" onClick={() => navigate('/login?panel=retailer')}>
+                    <Button className="w-full mt-4" onClick={() => goToPanel('retailer')}>
                       Access Panel
                     </Button>
                   </CardContent>
@@ -169,7 +177,7 @@ const Index = () => {
                       <li>• Authenticity check</li>
                       <li>• Ownership history</li>
                     </ul>
-                    <Button className="w-full mt-4" onClick={() => navigate('/login?panel=customer')}>
+                    <Button className="w-full mt-4" onClick={() => goToPanel('customer')}>
                       Access Panel
                     </Button>
                   </CardContent>
@@ -305,7 +313,7 @@ const Index = () => {
       <nav className="bg-white dark:bg-gray-800 shadow-sm border-b dark:border-gray-700">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center cursor-pointer" onClick={() => navigate('/')}>
+            <div className="flex items-center cursor-pointer" onClick={() => navigate('/')}> 
               <Shield className="h-8 w-8 text-blue-600 dark:text-blue-400 mr-3" />
               <span className="text-2xl font-bold text-gray-900 dark:text-white">BlockAuth</span>
             </div>
