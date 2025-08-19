@@ -7,21 +7,21 @@ const users = [
         id: '1',
         name: 'Alice Customer',
         email: 'customer1@example.com',
-        password: '$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2uheWG/igi.', // password: 'customer123'
+        password: '$2b$10$OtYOhXDi5pEYWbyOo7tFPOnIRd3OUNppmNPPAgbIcs4WbFkZEAeoW', // password: 'customer123'
         role: 'customer'
     },
     {
         id: '2',
         name: 'Bob Retailer',
         email: 'retailer1@example.com',
-        password: '$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2uheWG/igi.', // password: 'retailer123'
+        password: '$2b$10$OtYOhXDi5pEYWbyOo7tFPOnIRd3OUNppmNPPAgbIcs4WbFkZEAeoW', // password: 'retailer123'
         role: 'retailer'
     },
     {
         id: '3',
         name: 'Carol Manufacturer',
         email: 'manufacturer1@example.com',
-        password: '$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2uheWG/igi.', // password: 'manufacturer123'
+        password: '$2b$10$OtYOhXDi5pEYWbyOo7tFPOnIRd3OUNppmNPPAgbIcs4WbFkZEAeoW', // password: 'manufacturer123'
         role: 'manufacturer'
     }
 ];
