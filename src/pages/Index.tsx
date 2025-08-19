@@ -71,7 +71,7 @@ const Index = () => {
                   <h1 className="text-5xl font-bold text-gray-900 dark:text-white">BlockAuth</h1>
                 </div>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                  Secure product authentication system powered by blockchain technology. 
+                  Secure product authentication system powered by blockchain technology.
                   Verify authenticity, track ownership, and prevent counterfeiting.
                 </p>
               </div>
@@ -190,11 +190,11 @@ const Index = () => {
                         <div>
                           <label className="text-sm font-medium text-blue-700 dark:text-blue-300">Email:</label>
                           <div className="flex items-center gap-2 mt-1">
-                            <code className="bg-blue-200 dark:bg-blue-800 px-2 py-1 rounded text-sm flex-1">customer1@example.com</code>
-                            <Button 
-                              size="sm" 
-                              variant="outline" 
-                              className="text-xs h-8 px-2"
+                            <code className="bg-blue-200 dark:bg-blue-800 px-2 py-1 rounded text-sm flex-1 truncate">customer1@example.com</code>
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              className="text-xs h-8 px-2 flex-shrink-0"
                               onClick={() => navigator.clipboard.writeText('customer1@example.com')}
                             >
                               Copy
@@ -204,11 +204,11 @@ const Index = () => {
                         <div>
                           <label className="text-sm font-medium text-blue-700 dark:text-blue-300">Password:</label>
                           <div className="flex items-center gap-2 mt-1">
-                            <code className="bg-blue-200 dark:bg-blue-800 px-2 py-1 rounded text-sm flex-1">customer123</code>
-                            <Button 
-                              size="sm" 
-                              variant="outline" 
-                              className="text-xs h-8 px-2"
+                            <code className="bg-blue-200 dark:bg-blue-800 px-2 py-1 rounded text-sm flex-1 truncate">customer123</code>
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              className="text-xs h-8 px-2 flex-shrink-0"
                               onClick={() => navigator.clipboard.writeText('customer123')}
                             >
                               Copy
@@ -224,11 +224,11 @@ const Index = () => {
                         <div>
                           <label className="text-sm font-medium text-orange-700 dark:text-orange-300">Email:</label>
                           <div className="flex items-center gap-2 mt-1">
-                            <code className="bg-orange-200 dark:bg-orange-800 px-2 py-1 rounded text-sm flex-1">retailer1@example.com</code>
-                            <Button 
-                              size="sm" 
-                              variant="outline" 
-                              className="text-xs h-8 px-2"
+                            <code className="bg-orange-200 dark:bg-orange-800 px-2 py-1 rounded text-sm flex-1 truncate">retailer1@example.com</code>
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              className="text-xs h-8 px-2 flex-shrink-0"
                               onClick={() => navigator.clipboard.writeText('retailer1@example.com')}
                             >
                               Copy
@@ -238,11 +238,11 @@ const Index = () => {
                         <div>
                           <label className="text-sm font-medium text-orange-700 dark:text-orange-300">Password:</label>
                           <div className="flex items-center gap-2 mt-1">
-                            <code className="bg-orange-200 dark:bg-orange-800 px-2 py-1 rounded text-sm flex-1">retailer123</code>
-                            <Button 
-                              size="sm" 
-                              variant="outline" 
-                              className="text-xs h-8 px-2"
+                            <code className="bg-orange-200 dark:bg-orange-800 px-2 py-1 rounded text-sm flex-1 truncate">retailer123</code>
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              className="text-xs h-8 px-2 flex-shrink-0"
                               onClick={() => navigator.clipboard.writeText('retailer123')}
                             >
                               Copy
@@ -258,11 +258,11 @@ const Index = () => {
                         <div>
                           <label className="text-sm font-medium text-green-700 dark:text-green-300">Email:</label>
                           <div className="flex items-center gap-2 mt-1">
-                            <code className="bg-green-200 dark:bg-green-800 px-2 py-1 rounded text-sm flex-1">manufacturer1@example.com</code>
-                            <Button 
-                              size="sm" 
-                              variant="outline" 
-                              className="text-xs h-8 px-2"
+                            <code className="bg-green-200 dark:bg-green-800 px-2 py-1 rounded text-sm flex-1 truncate">manufacturer1@example.com</code>
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              className="text-xs h-8 px-2 flex-shrink-0"
                               onClick={() => navigator.clipboard.writeText('manufacturer1@example.com')}
                             >
                               Copy
@@ -272,11 +272,11 @@ const Index = () => {
                         <div>
                           <label className="text-sm font-medium text-green-700 dark:text-green-300">Password:</label>
                           <div className="flex items-center gap-2 mt-1">
-                            <code className="bg-green-200 dark:bg-green-800 px-2 py-1 rounded text-sm flex-1">manufacturer123</code>
-                            <Button 
-                              size="sm" 
-                              variant="outline" 
-                              className="text-xs h-8 px-2"
+                            <code className="bg-green-200 dark:bg-green-800 px-2 py-1 rounded text-sm flex-1 truncate">manufacturer123</code>
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              className="text-xs h-8 px-2 flex-shrink-0"
                               onClick={() => navigator.clipboard.writeText('manufacturer123')}
                             >
                               Copy
@@ -286,15 +286,12 @@ const Index = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="mt-8">
-                    <Button 
-                      onClick={() => navigate('/login?panel=customer')}
-                      className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
-                    >
-                      🚀 Start Testing Now
-                    </Button>
-                  </div>
                 </div>
+              </div>
+              
+              {/* Bottom Moving Shape Animation */}
+              <div className="relative h-32 overflow-hidden">
+                <AnimatedBackground type="shapes" className="bottom-0" />
               </div>
             </div>
           </div>
