@@ -175,6 +175,127 @@ const Index = () => {
                   </CardContent>
                 </Card>
               </div>
+
+              {/* Test Credentials Section */}
+              <div className="text-center mb-24">
+                <div className="max-w-4xl mx-auto rounded-3xl shadow-xl bg-white/40 dark:bg-gray-900/40 backdrop-blur-md py-12 px-4 md:px-12 border border-gray-200 dark:border-gray-700 relative">
+                  <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 relative z-10">🧪 Test Credentials</h2>
+                  <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Use these pre-created accounts to test the different user roles and features of BlockAuth.
+                  </p>
+                  <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto relative z-10">
+                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 rounded-2xl p-6 border border-blue-200 dark:border-blue-700">
+                      <h3 className="font-bold text-blue-800 dark:text-blue-200 mb-4 text-lg">👤 Customer Account</h3>
+                      <div className="space-y-3 text-left">
+                        <div>
+                          <label className="text-sm font-medium text-blue-700 dark:text-blue-300">Email:</label>
+                          <div className="flex items-center gap-2 mt-1">
+                            <code className="bg-blue-200 dark:bg-blue-800 px-2 py-1 rounded text-sm flex-1">customer1@example.com</code>
+                            <Button 
+                              size="sm" 
+                              variant="outline" 
+                              className="text-xs h-8 px-2"
+                              onClick={() => navigator.clipboard.writeText('customer1@example.com')}
+                            >
+                              Copy
+                            </Button>
+                          </div>
+                        </div>
+                        <div>
+                          <label className="text-sm font-medium text-blue-700 dark:text-blue-300">Password:</label>
+                          <div className="flex items-center gap-2 mt-1">
+                            <code className="bg-blue-200 dark:bg-blue-800 px-2 py-1 rounded text-sm flex-1">customer123</code>
+                            <Button 
+                              size="sm" 
+                              variant="outline" 
+                              className="text-xs h-8 px-2"
+                              onClick={() => navigator.clipboard.writeText('customer123')}
+                            >
+                              Copy
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/30 dark:to-orange-800/30 rounded-2xl p-6 border border-orange-200 dark:border-orange-700">
+                      <h3 className="font-bold text-orange-800 dark:text-orange-200 mb-4 text-lg">🏪 Retailer Account</h3>
+                      <div className="space-y-3 text-left">
+                        <div>
+                          <label className="text-sm font-medium text-orange-700 dark:text-orange-300">Email:</label>
+                          <div className="flex items-center gap-2 mt-1">
+                            <code className="bg-orange-200 dark:bg-orange-800 px-2 py-1 rounded text-sm flex-1">retailer1@example.com</code>
+                            <Button 
+                              size="sm" 
+                              variant="outline" 
+                              className="text-xs h-8 px-2"
+                              onClick={() => navigator.clipboard.writeText('retailer1@example.com')}
+                            >
+                              Copy
+                            </Button>
+                          </div>
+                        </div>
+                        <div>
+                          <label className="text-sm font-medium text-orange-700 dark:text-orange-300">Password:</label>
+                          <div className="flex items-center gap-2 mt-1">
+                            <code className="bg-orange-200 dark:bg-orange-800 px-2 py-1 rounded text-sm flex-1">retailer123</code>
+                            <Button 
+                              size="sm" 
+                              variant="outline" 
+                              className="text-xs h-8 px-2"
+                              onClick={() => navigator.clipboard.writeText('retailer123')}
+                            >
+                              Copy
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/30 dark:to-green-800/30 rounded-2xl p-6 border border-green-200 dark:border-green-700">
+                      <h3 className="font-bold text-green-800 dark:text-green-200 mb-4 text-lg">🏭 Manufacturer Account</h3>
+                      <div className="space-y-3 text-left">
+                        <div>
+                          <label className="text-sm font-medium text-green-700 dark:text-green-300">Email:</label>
+                          <div className="flex items-center gap-2 mt-1">
+                            <code className="bg-green-200 dark:bg-green-800 px-2 py-1 rounded text-sm flex-1">manufacturer1@example.com</code>
+                            <Button 
+                              size="sm" 
+                              variant="outline" 
+                              className="text-xs h-8 px-2"
+                              onClick={() => navigator.clipboard.writeText('manufacturer1@example.com')}
+                            >
+                              Copy
+                            </Button>
+                          </div>
+                        </div>
+                        <div>
+                          <label className="text-sm font-medium text-green-700 dark:text-green-300">Password:</label>
+                          <div className="flex items-center gap-2 mt-1">
+                            <code className="bg-green-200 dark:bg-green-800 px-2 py-1 rounded text-sm flex-1">manufacturer123</code>
+                            <Button 
+                              size="sm" 
+                              variant="outline" 
+                              className="text-xs h-8 px-2"
+                              onClick={() => navigator.clipboard.writeText('manufacturer123')}
+                            >
+                              Copy
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-8">
+                    <Button 
+                      onClick={() => navigate('/login?panel=customer')}
+                      className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+                    >
+                      🚀 Start Testing Now
+                    </Button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         );

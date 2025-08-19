@@ -63,7 +63,10 @@ const Login = () => {
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-900 dark:to-gray-800">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <div className="flex flex-row items-center justify-center mb-2 gap-2">
+          <div 
+            className="flex flex-row items-center justify-center mb-2 gap-2 cursor-pointer hover:opacity-80 transition-opacity"
+            onClick={() => navigate('/')}
+          >
             <Shield className="h-8 w-8 text-blue-600 dark:text-blue-400" />
             <span className="text-2xl font-bold text-gray-900 dark:text-white">BlockAuth</span>
           </div>
