@@ -6,21 +6,21 @@ let users = [
         id: '1',
         name: 'Alice Customer',
         email: 'customer1@example.com',
-        password: '$2b$10$rQZ8K9mN2pL3vX7yJ1hG4qR5tU6wE8sA9bC0dE1fG2hI3jK4lM5nO6pQ7rS8tU9vW0xY1zA2bC3dD4eE5fF6gG7hH8iI9jJ0kK1lL2mM3nN4oO5pP6qQ7rR8sS9tT0uU1vV2wW3xX4yY5zZ',
+        password: '$2b$10$BmfG94RW8snYKbDouwwCbOO61kt4OKWj3qwI/iyxBVjbjT63s/yJK', // customer123
         role: 'customer'
     },
     {
         id: '2',
         name: 'Bob Retailer',
         email: 'retailer1@example.com',
-        password: '$2b$10$rQZ8K9mN2pL3vX7yJ1hG4qR5tU6wE8sA9bC0dE1fG2hI3jK4lM5nO6pQ7rS8tU9vW0xY1zA2bC3dD4eE5fF6gG7hH8iI9jJ0kK1lL2mM3nN4oO5pP6qQ7rR8sS9tT0uU1vV2wW3xX4yY5zZ',
+        password: '$2b$10$TXszEZhg05Yvihqtzej/x.dHGNuiepQHP7veLmv37zozk5ZXqW.fq', // retailer123
         role: 'retailer'
     },
     {
         id: '3',
         name: 'Carol Manufacturer',
         email: 'manufacturer1@example.com',
-        password: '$2b$10$rQZ8K9mN2pL3vX7yJ1hG4qR5tU6wE8sA9bC0dE1fG2hI3jK4lM5nO6pQ7rS8tU9vW0xY1zA2bC3dD4eE5fF6gG7hH8iI9jJ0kK1lL2mM3nN4oO5pP6qQ7rR8sS9tT0uU1vV2wW3xX4yY5zZ',
+        password: '$2b$10$VzsjzGYvGfY9osdcIBBdZOzD95tdQuCWPJl4Z6ArziidVtHlhGKe6', // manufacturer123
         role: 'manufacturer'
     }
 ];
