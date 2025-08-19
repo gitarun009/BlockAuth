@@ -1,5 +1,5 @@
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import QrScanner from 'qr-scanner';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -22,41 +22,24 @@ const QRScanner = ({ onScanResult, onClose, isOpen, title = "QR Code Scanner", d
   const { toast } = useToast();
 
   useEffect(() => {
-    if (!isOpen || !videoRef.current) return;
+    if (!isOpen) return;
 
     const initScanner = async () => {
       try {
         setIsScanning(true);
-        
-        // Check if camera is available
-        const hasCamera = await QrScanner.hasCamera();
-        if (!hasCamera) {
-          setHasCamera(false);
-          toast({
-            title: "No Camera Found",
-            description: "Please ensure your device has a camera and you've granted camera permissions.",
-            variant: "destructive",
-          });
-          return;
-        }
-
         const scanner = new QrScanner(
           videoRef.current!,
           (result) => {
             onScanResult(result.data);
-            onClose();
-            toast({
-              title: "QR Code Scanned",
-              description: "Successfully scanned QR code!",
-            });
+            handleClose();
           },
           {
+            returnDetailedScanResult: true,
             highlightScanRegion: true,
             highlightCodeOutline: true,
-            preferredCamera: 'environment', // Use back camera if available
+            overlay: null,
           }
         );
-
         await scanner.start();
         setQrScanner(scanner);
         setHasCamera(true);
@@ -83,13 +66,13 @@ const QRScanner = ({ onScanResult, onClose, isOpen, title = "QR Code Scanner", d
     };
   }, [isOpen, onScanResult, onClose, toast]);
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     if (qrScanner) {
       qrScanner.stop();
       qrScanner.destroy();
     }
     onClose();
-  };
+  }, [qrScanner, onClose]);
 
   if (!isOpen) return null;
 

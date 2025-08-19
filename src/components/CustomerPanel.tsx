@@ -10,8 +10,21 @@ import AnimatedBackground from "./AnimatedBackground";
 
 const CustomerPanel = () => {
   const [productId, setProductId] = useState("");
-  const [productInfo, setProductInfo] = useState<any>(null);
-  const [salesHistory, setSalesHistory] = useState<any[]>([]);
+  const [productInfo, setProductInfo] = useState<{
+    id: string;
+    name: string;
+    manufacturer: string;
+    serialNumber: string;
+    isValid: boolean;
+  } | null>(null);
+  const [salesHistory, setSalesHistory] = useState<Array<{
+    _id: string;
+    productId: string;
+    retailerId: string;
+    customerId: string;
+    saleDate: string;
+    price: number;
+  }>>([]);
   const [showScanner, setShowScanner] = useState(false);
   const { toast } = useToast();
 
