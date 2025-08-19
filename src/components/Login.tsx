@@ -8,6 +8,8 @@ import { useToast } from "@/hooks/use-toast";
 import { Shield } from "lucide-react";
 import { BlockchainLoader } from "./AnimatedBackground";
 
+const validRoles = new Set(["customer", "retailer", "manufacturer"]);
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,7 +21,8 @@ const Login = () => {
 
   // Get panel from query param
   const params = new URLSearchParams(location.search);
-  const panel = params.get("panel");
+  const incomingPanel = params.get("panel");
+  const panel = validRoles.has(incomingPanel || "") ? (incomingPanel as "customer"|"retailer"|"manufacturer") : "customer";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -41,10 +44,10 @@ const Login = () => {
       } else {
         // Store token and role in localStorage
         localStorage.setItem("blockauth_token", data.token);
-        localStorage.setItem("blockauth_role", data.role);
+        localStorage.setItem("blockauth_role", data.user?.role || panel);
         setShowLoader(true);
         setTimeout(() => {
-          navigate(`/?panel=${panel || "customer"}`);
+          navigate(`/?panel=${panel}`);
         }, 2200);
       }
     } catch (err) {
@@ -86,7 +89,7 @@ const Login = () => {
               {loading ? "Logging in..." : "Login"}
             </Button>
             <div className="text-center text-sm mt-2">
-              Don't have an account? <a href={`/register?panel=${panel || "customer"}`} className="text-blue-600 dark:text-blue-400 underline">Register</a>
+              Don't have an account? <a href={`/register?panel=${panel}`} className="text-blue-600 dark:text-blue-400 underline">Register</a>
             </div>
           </form>
         </CardContent>

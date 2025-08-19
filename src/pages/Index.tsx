@@ -11,6 +11,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import AnimatedBackground, { BlockchainLoader } from "../components/AnimatedBackground";
 
+const validRoles = new Set(["customer", "retailer", "manufacturer"]);
+
 const Index = () => {
   const [activePanel, setActivePanel] = useState<'home' | 'manufacturer' | 'retailer' | 'customer'>('home');
   const [loading, setLoading] = useState(true);
@@ -21,7 +23,14 @@ const Index = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      setRole(getRole());
+      const stored = getRole();
+      if (stored && validRoles.has(stored)) {
+        setRole(stored);
+      } else {
+        // Clean up invalid role values
+        localStorage.removeItem("blockauth_role");
+        setRole(null);
+      }
     } else {
       setRole(null);
     }
@@ -187,7 +196,7 @@ const Index = () => {
               {/* Test Credentials Section */}
               <div className="text-center mb-24">
                 <div className="max-w-4xl mx-auto rounded-3xl shadow-xl bg-white/40 dark:bg-gray-900/40 backdrop-blur-md py-12 px-4 md:px-12 border border-gray-200 dark:border-gray-700 relative">
-                  <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 relative z-10">🧪 Test Credentials</h2>
+                  <h2 className="text-3xl font-bold text-gray-900 dark:text:white mb-8 relative z-10">🧪 Test Credentials</h2>
                   <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
                     Use these pre-created accounts to test the different user roles and features of BlockAuth.
                   </p>
@@ -318,7 +327,7 @@ const Index = () => {
               <span className="text-2xl font-bold text-gray-900 dark:text-white">BlockAuth</span>
             </div>
             <div className="flex items-center space-x-4">
-              {isAuthenticated && role && (
+              {isAuthenticated && role && validRoles.has(role) && (
                 <>
                   <Button variant="outline" onClick={() => navigate(`/?panel=${role}`)}>
                     {role.charAt(0).toUpperCase() + role.slice(1)} Panel
