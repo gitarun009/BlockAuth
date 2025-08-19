@@ -20,4 +20,10 @@ export default defineConfig(({ mode }) => ({
     },
   },
   base: '/',
+  build: {
+    target: 'esnext',
+    rollupOptions: {
+      external: ['@rollup/rollup-linux-x64-gnu']
+    }
+  }
 }));
