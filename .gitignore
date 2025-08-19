@@ -33,3 +33,4 @@ build/
 
 # Note: Ignoring node_modules, dist, build, .env, etc. does NOT affect GitHub Pages deployment.
 # GitHub Pages uses the files you push to the repo. For React/Vite, deploy the build output (often /docs or /build) as needed.
+.vercel
