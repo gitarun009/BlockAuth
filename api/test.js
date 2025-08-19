@@ -1,4 +1,4 @@
-module.exports = async function handler(req, res) {
+export default async function handler(req, res) {
   res.status(200).json({ 
     message: 'API is working!',
     method: req.method,
